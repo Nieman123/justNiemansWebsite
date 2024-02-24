@@ -41,6 +41,7 @@ dependencies:
   path_provider: ^2.0.2 
   carousel_slider: ^4.2.1
   font_awesome_flutter: ^10.5.0
+  url_launcher: ^6.2.4
 
 
 dev_dependencies:
@@ -67,7 +68,11 @@ flutter:
 
   assets:
     - assets/galaxy_donutz_promo.gif
-    - assets/recell-device.png
+    - assets/lives.webp
+    - assets/personal.webp
+    - assets/BRB.webp
+    - assets/b2b.webp
+    - assets/purplebuffalo.webp
     - assets/bldr.gif
     - assets/flutter+dart.png
     - assets/Jonathan-Nieman-Resume-10-2-2023.pdf

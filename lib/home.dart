@@ -2,11 +2,13 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:foil/foil.dart';
-import 'package:niemanswebsite/avita.dart';
+import 'package:niemanswebsite/eventcard.dart';
+import 'package:niemanswebsite/livesrelease.dart';
 import 'package:niemanswebsite/contact_me.dart';
 import 'package:niemanswebsite/installer.dart';
 import 'package:niemanswebsite/introduction.dart';
 import 'package:niemanswebsite/multiverse.dart';
+import 'package:niemanswebsite/personalrelease.dart';
 import 'package:niemanswebsite/resumedownload.dart';
 import 'package:niemanswebsite/skills.dart';
 import 'package:niemanswebsite/teams.dart';
@@ -31,7 +33,7 @@ class _HomePageState extends State<HomePage> {
       Future.microtask(() {
         SystemChrome.setApplicationSwitcherDescription(
             ApplicationSwitcherDescription(
-          label: "Nieman's Website",
+          label: "Just Nieman's Website",
           primaryColor: Colors.black.value,
         ));
       });
@@ -62,19 +64,16 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Roll(
+                      const Roll(
                         crinkle: Crinkle.vivacious,
                         child: Foil(
-                          gradient: Foils.linearRainbow.copyWith(
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: List.from(Foils.linearRainbow.colors)),
+                          gradient: Foils.oilslick,
                           opacity: 0.6,
                           scalar: Scalar.identity,
-                          speed: const Duration(seconds: 200),
-                          duration: const Duration(milliseconds: 100000),
-                          child: const Text(
-                            "Nieman's Website",
+                          speed: Duration(seconds: 200),
+                          duration: Duration(milliseconds: 100000),
+                          child: Text(
+                            "Just Nieman",
                             textScaleFactor: 4.5,
                             style: TextStyle(
                               fontFamily: 'FjallaOne',
@@ -88,16 +87,11 @@ class _HomePageState extends State<HomePage> {
                       Padding(
                         padding: EdgeInsets.only(top: height * 0.07),
                         child: const Introduction(
-                            word:
-                                'Senior Software Engineer | XR Engineer | Cross-Platform Development Leader',
+                            word: 'Multi-genre EDM producer and DJ',
                             textScaleFactor: 1.5),
                       ),
                       const SizedBox(
                         height: 10.0,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(height * 0.01),
-                        child: Center(child: ResumeDownloadButton()),
                       ),
                       About(fontSize: 15),
                       Center(
@@ -109,13 +103,7 @@ class _HomePageState extends State<HomePage> {
                             enlargeStrategy: CenterPageEnlargeStrategy.height,
                           ),
                           items: [
-                            ['assets/gallery/1.png', 'Nieman and Minnie'],
-                            ['assets/gallery/3.jpg', 'On the bike :)'],
                             ['assets/gallery/4.jpg', 'The Weekends'],
-                            [
-                              'assets/gallery/5.jpg',
-                              'On the Tail of the Dragon'
-                            ],
                             ['assets/gallery/6.jpg', 'With my friend Ronie'],
                           ].map((i) {
                             return Builder(
@@ -161,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                         padding: EdgeInsets.all(height * 0.04),
                         child: Center(
                           child: Text(
-                            "Professional Showcase",
+                            "NEWEST RELEASES",
                             style: TextStyle(
                               fontSize:
                                   28.0, // Adjust as per your design requirement
@@ -171,9 +159,9 @@ class _HomePageState extends State<HomePage> {
                               fontFamily: 'SourceCodePro',
                               shadows: [
                                 Shadow(
-                                  offset: Offset(2.0, 2.0),
+                                  offset: const Offset(2.0, 2.0),
                                   blurRadius: 3.0,
-                                  color: Color.fromARGB(29, 165, 0, 143)
+                                  color: const Color.fromARGB(29, 165, 0, 143)
                                       .withOpacity(0.3),
                                 ),
                               ],
@@ -181,30 +169,14 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      GDProject(
+                      LivesRelease(
                         fontSize: 15,
                         isMobile: true,
                       ),
-                      Avita(
+                      PersonalRelease(
                         fontSize: 15,
                         isMobile: true,
                       ),
-                      Multiverse(
-                        fontSize: 15,
-                        isMobile: true,
-                      ),
-                      Installer(fontSize: 15, isMobile: true),
-                      Mentor(fontSize: 15, isMobile: true),
-                      Teams(fontSize: 15, isMobile: true),
-                      const SkillsSection(),
-                      const SizedBox(
-                        height: 10.0,
-                      ),
-                      const WorkProcess(
-                          word:
-                              """My preferred methodology draws inspiration from the SCRUM framework, a collaborative approach that promotes team synergy, iterative progress, and constant feedback. By breaking down complex projects into manageable tasks tailored to individual developers, I ensure that each team member has clarity on their responsibilities and the bigger picture. To complement this, I employ Gantt charts as a visual tool to track progress, set milestones, and ensure timely project completion. This combination of methods not only fosters efficiency but also ensures that the project remains adaptable to changing requirements, guaranteeing solutions that are both robust and flexible.""",
-                          textScaleFactor: 1.0),
-                      const ContactMe()
                     ],
                   ),
                 ),
@@ -246,15 +218,15 @@ class _HomePageState extends State<HomePage> {
                                               .copyWith(
                                                   begin: Alignment.topLeft,
                                                   end: Alignment.bottomRight,
-                                                  colors: List.from(Foils
-                                                      .linearRainbow.colors)),
+                                                  colors: List.from(
+                                                      Foils.oilslick.colors)),
                                           opacity: 0.6,
                                           scalar: Scalar.identity,
                                           speed: const Duration(seconds: 200),
                                           duration:
                                               const Duration(seconds: 100),
                                           child: const Text(
-                                            "Nieman's Website",
+                                            "Just Nieman",
                                             textScaleFactor: 4.5,
                                             style: TextStyle(
                                               fontFamily: 'FjallaOne',
@@ -266,8 +238,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     const Introduction(
-                                        word:
-                                            'Senior Software Engineer | XR Engineer | Cross-Platform Development Leader',
+                                        word: 'Multi-genre EDM producer and DJ',
                                         textScaleFactor: 1.5),
                                   ],
                                 ),
@@ -283,16 +254,7 @@ class _HomePageState extends State<HomePage> {
                                       enlargeStrategy:
                                           CenterPageEnlargeStrategy.height),
                                   items: [
-                                    [
-                                      'assets/gallery/1.png',
-                                      'Nieman and Minnie'
-                                    ],
-                                    ['assets/gallery/3.jpg', 'On the bike :)'],
                                     ['assets/gallery/4.jpg', 'The Weekends'],
-                                    [
-                                      'assets/gallery/5.jpg',
-                                      'On the Tail of the Dragon'
-                                    ],
                                     [
                                       'assets/gallery/6.jpg',
                                       'With my friend Ronie'
@@ -347,28 +309,23 @@ class _HomePageState extends State<HomePage> {
                         const SizedBox(
                           height: 15.0,
                         ),
-                        Padding(
-                          padding: EdgeInsets.all(height * 0.01),
-                          child: Center(child: ResumeDownloadButton()),
-                        ),
                         About(fontSize: 15),
                         Padding(
                           padding: EdgeInsets.all(height * 0.04),
                           child: Center(
                             child: Text(
-                              "Professional Showcase",
+                              "NEWEST RELEASES",
                               style: TextStyle(
-                                fontSize:
-                                    28.0, // Adjust as per your design requirement
+                                fontSize: 28.0,
                                 fontWeight: FontWeight.w700,
                                 color: Theme.of(context).colorScheme.onPrimary,
                                 letterSpacing: 2.0,
                                 fontFamily: 'SourceCodePro',
                                 shadows: [
                                   Shadow(
-                                    offset: Offset(2.0, 2.0),
+                                    offset: const Offset(2.0, 2.0),
                                     blurRadius: 3.0,
-                                    color: Color.fromARGB(29, 165, 0, 143)
+                                    color: const Color.fromARGB(29, 165, 0, 143)
                                         .withOpacity(0.3),
                                   ),
                                 ],
@@ -376,65 +333,80 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        Flex(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          direction: Axis.horizontal,
-                          children: [
-                            Expanded(
-                              child: Multiverse(
+                        SizedBox(
+                          height: 500.0,
+                          child: Flex(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            direction: Axis.horizontal,
+                            children: [
+                              Expanded(
+                                  child: LivesRelease(
                                 fontSize: 15,
                                 isMobile: false,
-                              ),
-                            ),
-                            Expanded(
-                                child: Avita(
-                              fontSize: 15,
-                              isMobile: false,
-                            )),
-                          ],
-                        ),
-                        Flex(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          direction: Axis.horizontal,
-                          children: [
-                            Expanded(
-                              child: GDProject(
+                              )),
+                              Expanded(
+                                  child: PersonalRelease(
                                 fontSize: 15,
                                 isMobile: false,
+                              )),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(height * 0.04),
+                          child: Center(
+                            child: Text(
+                              "UPCOMING SHOWS",
+                              style: TextStyle(
+                                fontSize: 28.0,
+                                fontWeight: FontWeight.w700,
+                                color: Theme.of(context).colorScheme.onPrimary,
+                                letterSpacing: 2.0,
+                                fontFamily: 'SourceCodePro',
+                                shadows: [
+                                  Shadow(
+                                    offset: const Offset(2.0, 2.0),
+                                    blurRadius: 3.0,
+                                    color: const Color.fromARGB(29, 165, 0, 143)
+                                        .withOpacity(0.3),
+                                  ),
+                                ],
                               ),
                             ),
-                            Expanded(
-                                child: Installer(
-                              fontSize: 15,
-                              isMobile: false,
-                            )),
-                          ],
+                          ),
                         ),
-                        Flex(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          direction: Axis.horizontal,
-                          children: [
-                            Expanded(
-                              child: Mentor(
-                                fontSize: 15,
-                                isMobile: false,
-                              ),
-                            ),
-                            Expanded(
-                                child: Teams(
-                              fontSize: 15,
-                              isMobile: false,
-                            )),
-                          ],
-                        ),
-                        const SkillsSection(),
                         const SizedBox(
-                          height: 10.0,
+                          child: Flex(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            direction: Axis.horizontal,
+                            children: [
+                              Expanded(
+                                child: EventCard(
+                                  title: 'BRB SESSIONS',
+                                  imageUrl: 'assets/BRB.webp',
+                                  date: '2/23/2024',
+                                  location: 'Static Age Loft, Asheville',
+                                ),
+                              ),
+                              Expanded(
+                                child: EventCard(
+                                  title: 'THE BUFFALO PARTY',
+                                  imageUrl: 'assets/purplebuffalo.webp',
+                                  date: '3/2/2024',
+                                  location: 'NORTH CHARLESTON',
+                                ),
+                              ),
+                              Expanded(
+                                child: EventCard(
+                                  title: 'B2B THE FUTURE',
+                                  imageUrl: 'assets/b2b.webp',
+                                  date: '2/29/2024',
+                                  location: 'MYRTLE BEACH',
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        const WorkProcess(
-                            word:
-                                """My preferred methodology draws inspiration from the SCRUM framework, a collaborative approach that promotes team synergy, iterative progress, and constant feedback. By breaking down complex projects into manageable tasks tailored to individual developers, I ensure that each team member has clarity on their responsibilities and the bigger picture. To complement this, I employ Gantt charts as a visual tool to track progress, set milestones, and ensure timely project completion. This combination of methods not only fosters efficiency but also ensures that the project remains adaptable to changing requirements, guaranteeing solutions that are both robust and flexible.""",
-                            textScaleFactor: 1.0),
                         const ContactMe()
                       ],
                     ),

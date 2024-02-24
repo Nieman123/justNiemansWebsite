@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_list_view/flutter_list_view.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
-import 'package:niemanswebsite/underconstruction.dart';
 import 'package:sa3_liquid/liquid/plasma/plasma.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -32,10 +31,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Nieman's Website",
+      title: "Just Nieman's Website",
       theme: CustomTheme.darkTheme,
       darkTheme: CustomTheme.darkTheme,
-      home: const MyHomePage(title: "Welcome to Nieman's Website"),
+      home: const MyHomePage(title: "Welcome to Just Nieman's Website"),
       navigatorObservers: <NavigatorObserver>[observer],
     );
   }
@@ -68,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const PlasmaRenderer(
               type: PlasmaType.infinity,
               particles: 30,
-              color: Color.fromARGB(29, 95, 95, 95),
+              color: Color.fromARGB(8, 131, 0, 218),
               blur: 0.5,
               size: 1,
               speed: 0.5,
@@ -93,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const PlasmaRenderer(
               type: PlasmaType.infinity,
               particles: 30,
-              color: Color.fromARGB(29, 95, 95, 95),
+              color: Color.fromARGB(8, 131, 0, 218),
               blur: 0.5,
               size: 1,
               speed: 0.5,
