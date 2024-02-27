@@ -382,14 +382,6 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Expanded(
                                 child: EventCard(
-                                  title: 'BRB SESSIONS',
-                                  imageUrl: 'assets/BRB.webp',
-                                  date: '2/23/2024',
-                                  location: 'Static Age Loft, Asheville',
-                                ),
-                              ),
-                              Expanded(
-                                child: EventCard(
                                   title: 'THE BUFFALO PARTY',
                                   imageUrl: 'assets/purplebuffalo.webp',
                                   date: '3/2/2024',

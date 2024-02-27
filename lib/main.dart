@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_list_view/flutter_list_view.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:niemanswebsite/links.dart';
 import 'package:sa3_liquid/liquid/plasma/plasma.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -34,7 +35,12 @@ class MyApp extends StatelessWidget {
       title: "Just Nieman's Website",
       theme: CustomTheme.darkTheme,
       darkTheme: CustomTheme.darkTheme,
-      home: const MyHomePage(title: "Welcome to Just Nieman's Website"),
+      initialRoute: '/',
+      routes: {
+        '/': (context) =>
+            const MyHomePage(title: "Welcome to Just Nieman's Website"),
+        '/links': (context) => const LinksPage(), // New links page route
+      },
       navigatorObservers: <NavigatorObserver>[observer],
     );
   }

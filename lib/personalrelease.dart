@@ -15,9 +15,9 @@ class PersonalRelease extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
 
-    double cardWidth = screenWidth * 0.4;
+    double cardWidth = screenWidth * 0.9;
 
-    double maxWidth = 350.0;
+    double maxWidth = 900.0;
     double containerWidth = cardWidth > maxWidth ? maxWidth : cardWidth;
 
     return Container(
