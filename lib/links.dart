@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:niemanswebsite/main.dart';
-import 'package:url_launcher/url_launcher.dart';
-
 import 'link_box.dart';
 
 class LinksPage extends StatelessWidget {
