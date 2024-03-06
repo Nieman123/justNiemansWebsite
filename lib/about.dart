@@ -7,7 +7,8 @@ class About extends StatelessWidget {
   }) : super(key: key);
 
   final double fontSize;
-  final String gotAbout = """Something something description here""";
+  final String gotAbout =
+      """Just Nieman is a multi genre EDM producer and DJ from Asheville, NC.""";
 
   @override
   Widget build(BuildContext context) {

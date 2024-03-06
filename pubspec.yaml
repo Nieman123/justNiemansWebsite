@@ -67,15 +67,10 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/galaxy_donutz_promo.gif
     - assets/lives.webp
     - assets/personal.webp
-    - assets/BRB.webp
-    - assets/b2b.webp
-    - assets/purplebuffalo.webp
-    - assets/bldr.gif
-    - assets/flutter+dart.png
-    - assets/Jonathan-Nieman-Resume-10-2-2023.pdf
+    - assets/420-fest-v2.webp
+    - assets/st patty .webp
     - assets/home/constant/
     - assets/gallery/
     - assets/instagram.webp

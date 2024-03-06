@@ -5,20 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "niemanswebsite",
+            "name": "justniemanswebsite",
             "request": "launch",
             "type": "dart",
             "deviceId": "chrome"
         },
         {
-            "name": "niemanswebsite (profile mode)",
+            "name": "justniemanswebsite (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile",
             "deviceId": "chrome"
         },
         {
-            "name": "niemanswebsite (release mode)",
+            "name": "justniemanswebsite (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release",

@@ -5,18 +5,10 @@ import 'package:foil/foil.dart';
 import 'package:niemanswebsite/eventcard.dart';
 import 'package:niemanswebsite/livesrelease.dart';
 import 'package:niemanswebsite/contact_me.dart';
-import 'package:niemanswebsite/installer.dart';
 import 'package:niemanswebsite/introduction.dart';
-import 'package:niemanswebsite/multiverse.dart';
 import 'package:niemanswebsite/personalrelease.dart';
-import 'package:niemanswebsite/resumedownload.dart';
-import 'package:niemanswebsite/skills.dart';
-import 'package:niemanswebsite/teams.dart';
-import 'package:niemanswebsite/work_process.dart';
 
 import 'about.dart';
-import 'gd_project.dart';
-import 'mentor.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -105,6 +97,7 @@ class _HomePageState extends State<HomePage> {
                           items: [
                             ['assets/gallery/4.jpg', 'The Weekends'],
                             ['assets/gallery/6.jpg', 'With my friend Ronie'],
+                            ['assets/gallery/2.webp', 'At Static Age Loft'],
                           ].map((i) {
                             return Builder(
                               builder: (BuildContext context) {
@@ -176,6 +169,42 @@ class _HomePageState extends State<HomePage> {
                       PersonalRelease(
                         fontSize: 15,
                         isMobile: true,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(height * 0.04),
+                        child: Center(
+                          child: Text(
+                            "UPCOMING SHOWS",
+                            style: TextStyle(
+                              fontSize:
+                                  28.0, // Adjust as per your design requirement
+                              fontWeight: FontWeight.w700,
+                              color: Theme.of(context).colorScheme.onPrimary,
+                              letterSpacing: 2.0,
+                              fontFamily: 'SourceCodePro',
+                              shadows: [
+                                Shadow(
+                                  offset: const Offset(2.0, 2.0),
+                                  blurRadius: 3.0,
+                                  color: const Color.fromARGB(29, 165, 0, 143)
+                                      .withOpacity(0.3),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      const EventCard(
+                        title: 'PLUTO AT THE GETAWAY',
+                        imageUrl: 'assets/st patty .webp',
+                        date: '3/16/2024',
+                        location: 'ASHEVILLE, NC',
+                      ),
+                      const EventCard(
+                        title: "PLUTO'S PUFF: A 420 FEST",
+                        imageUrl: 'assets/420-fest-v2.webp',
+                        date: '4/20/2024',
+                        location: 'ASHEVILLE, NC',
                       ),
                     ],
                   ),
@@ -258,6 +287,10 @@ class _HomePageState extends State<HomePage> {
                                     [
                                       'assets/gallery/6.jpg',
                                       'With my friend Ronie'
+                                    ],
+                                    [
+                                      'assets/gallery/2.webp',
+                                      'At Static Age Loft'
                                     ],
                                   ].map((i) {
                                     return Builder(
@@ -382,18 +415,18 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Expanded(
                                 child: EventCard(
-                                  title: 'THE BUFFALO PARTY',
-                                  imageUrl: 'assets/purplebuffalo.webp',
-                                  date: '3/2/2024',
-                                  location: 'NORTH CHARLESTON',
+                                  title: 'PLUTO AT THE GETAWAY',
+                                  imageUrl: 'assets/st patty .webp',
+                                  date: '3/16/2024',
+                                  location: 'ASHEVILLE, NC',
                                 ),
                               ),
                               Expanded(
                                 child: EventCard(
-                                  title: 'B2B THE FUTURE',
-                                  imageUrl: 'assets/b2b.webp',
-                                  date: '2/29/2024',
-                                  location: 'MYRTLE BEACH',
+                                  title: "PLUTO'S PUFF: A 420 FEST",
+                                  imageUrl: 'assets/420-fest-v2.webp',
+                                  date: '4/20/2024',
+                                  location: 'ASHEVILLE, NC',
                                 ),
                               ),
                             ],
