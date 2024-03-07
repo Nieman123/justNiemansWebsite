@@ -28,8 +28,7 @@ class MyApp extends StatelessWidget {
   static FirebaseAnalyticsObserver observer =
       FirebaseAnalyticsObserver(analytics: analytics);
 
-  // This widget is the root of your application.
-  @override
+   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Just Nieman's Website",
@@ -39,7 +38,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) =>
             const MyHomePage(title: "Welcome to Just Nieman's Website"),
-        '/links': (context) => const LinksPage(), // New links page route
+        '/links': (context) => const LinksPage(),
       },
       navigatorObservers: <NavigatorObserver>[observer],
     );
