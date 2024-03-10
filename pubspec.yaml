@@ -74,6 +74,8 @@ flutter:
     - assets/home/constant/
     - assets/gallery/
     - assets/instagram.webp
+    - assets/youtube-icon.webp
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

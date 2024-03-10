@@ -38,6 +38,11 @@ class LinksPage extends StatelessWidget {
                 text: 'STREAM "LIVES"',
                 url: 'https://distrokid.com/hyperfollow/justnieman/lives'),
             LinkBox(
+                icon: Icons.youtube_searched_for,
+                image: AssetImage("assets/youtube-icon.webp"),
+                text: 'NIEMIX VOL. 1 on YOUTUBE',
+                url: 'https://www.youtube.com/watch?v=_HD_6o6um1U'),
+            LinkBox(
                 icon: Icons.music_note,
                 image: AssetImage("assets/instagram.webp"),
                 text: 'FOLLOW ME ON INSTA',
