@@ -26,7 +26,12 @@ class LinksPage extends StatelessWidget {
                   fontSize: 30 // Makes text bold
                   ),
             ),
-            SizedBox(height: 20), // Space between photo and links
+            SizedBox(height: 20),
+            LinkBox(
+                icon: Icons.link,
+                image: AssetImage("assets/my-music.webp"),
+                text: 'PRESAVE "MY MUSIC"',
+                url: 'https://distrokid.com/hyperfollow/justnieman/my-music'),
             LinkBox(
                 icon: Icons.link,
                 image: AssetImage("assets/lives.webp"),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_list_view/flutter_list_view.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:go_router/go_router.dart';
 import 'package:niemanswebsite/links.dart';
 import 'package:sa3_liquid/liquid/plasma/plasma.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -18,29 +19,43 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   static FirebaseAnalyticsObserver observer =
       FirebaseAnalyticsObserver(analytics: analytics);
 
-   @override
+  final GoRouter _router = GoRouter(
+    routes: [
+      GoRoute(
+        path: '/',
+        builder: (BuildContext context, GoRouterState state) {
+          return const MyHomePage(title: "Welcome to Just Nieman's Website");
+        },
+      ),
+      GoRoute(
+        path: '/links',
+        builder: (BuildContext context, GoRouterState state) {
+          return const LinksPage();
+        },
+      ),
+    ],
+    observers: <NavigatorObserver>[observer],
+  );
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerDelegate: _router.routerDelegate,
+      routeInformationParser: _router.routeInformationParser,
+      routeInformationProvider: _router.routeInformationProvider,
       title: "Just Nieman's Website",
       theme: CustomTheme.darkTheme,
       darkTheme: CustomTheme.darkTheme,
-      initialRoute: '/',
-      routes: {
-        '/': (context) =>
-            const MyHomePage(title: "Welcome to Just Nieman's Website"),
-        '/links': (context) => const LinksPage(),
-      },
-      navigatorObservers: <NavigatorObserver>[observer],
     );
   }
 }
