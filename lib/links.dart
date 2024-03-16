@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:niemanswebsite/main.dart';
 import 'link_box.dart';
 
 class LinksPage extends StatelessWidget {
