@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:niemanswebsite/main.dart';
 import 'link_box.dart';
 
 class LinksPage extends StatelessWidget {
@@ -6,50 +8,55 @@ class LinksPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         // Make the column scrollable
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 20), // Add some space before the profile photo
-              CircleAvatar(
-                radius: 50, // Adjust the size as needed
-                backgroundImage: NetworkImage(
-                    'https://i.imgur.com/afap3cq.jpeg'), // Replace with your image URL
+              const SizedBox(height: 20),
+              GestureDetector(
+                // Wrap the CircleAvatar with GestureDetector
+                onTap: () {
+                  context.go('/');
+                },
+                child: const CircleAvatar(
+                  radius: 50,
+                  backgroundImage:
+                      NetworkImage('https://i.imgur.com/afap3cq.jpeg'),
+                ),
               ),
-              SizedBox(height: 20), // Space between photo and links
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 "JUST NIEMAN",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 30 // Makes text bold
-                    ),
+                    fontSize: 30),
               ),
-              SizedBox(height: 20),
-              LinkBox(
+              const SizedBox(height: 20),
+              const LinkBox(
                   icon: Icons.link,
                   image: AssetImage("assets/my-music.webp"),
                   text: 'PRESAVE "MY MUSIC"',
                   url: 'https://distrokid.com/hyperfollow/justnieman/my-music'),
-              LinkBox(
+              const LinkBox(
                   icon: Icons.link,
                   image: AssetImage("assets/lives.webp"),
                   text: 'STREAM "PERSONAL"',
                   url: 'https://distrokid.com/hyperfollow/justnieman/personal'),
-              LinkBox(
+              const LinkBox(
                   icon: Icons.music_note,
                   image: AssetImage("assets/personal.webp"),
                   text: 'STREAM "LIVES"',
                   url: 'https://distrokid.com/hyperfollow/justnieman/lives'),
-              LinkBox(
+              const LinkBox(
                   icon: Icons.youtube_searched_for,
                   image: AssetImage("assets/youtube-icon.webp"),
                   text: 'NIEMIX VOL. 1 on YOUTUBE',
                   url: 'https://www.youtube.com/watch?v=_HD_6o6um1U'),
-              LinkBox(
+              const LinkBox(
                   icon: Icons.music_note,
                   image: AssetImage("assets/instagram.webp"),
                   text: 'FOLLOW ME ON INSTA',
