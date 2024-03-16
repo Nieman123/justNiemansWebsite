@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:niemanswebsite/main.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:math';
 
@@ -19,34 +18,23 @@ class LinkBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Determine the fixed width based on the screen size or a constant value
-    double buttonWidth = min(MediaQuery.of(context).size.width * 0.8,
-        800.0); // 80% of screen width or max 800
+    double buttonWidth = min(MediaQuery.of(context).size.width * 0.8, 800.0);
+    double iconHeight = 75;
+
+    final imageProvider = image;
 
     return InkWell(
       onTap: () async {
-        var uri = Uri.parse(this.url);
+        var uri = Uri.parse(url);
         if (await canLaunchUrl(uri)) {
           launchUrl(uri);
-          // Log the event with Firebase Analytics
-          await analytics.logEvent(
-            name: 'link_clicked',
-            parameters: {
-              'icon': icon
-                  .toString(), // Log the icon or some identifier of the link
-              'text': text, // The text associated with the link
-              'url': url, // The URL that was clicked
-            },
-          );
         }
       },
       child: Container(
-        width: buttonWidth, // Fixed width for all buttons
-        height: 120.0,
+        width: buttonWidth,
+        height: 150.0,
         margin: const EdgeInsets.all(8),
-        padding: const EdgeInsets.symmetric(
-            vertical: 20,
-            horizontal: 10), // Increase padding to make buttons taller
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -59,35 +47,24 @@ class LinkBox extends StatelessWidget {
             ),
           ],
         ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            if (image != null) // Only display the image if it is provided
-              ClipRRect(
-                borderRadius:
-                    BorderRadius.circular(5), // Adjust the radius as needed
-                child: Container(
-                  height: double
-                      .infinity, // Expand the height to match the LinkBox height
-                  child: Image(
-                    image: image ?? const AssetImage('assets/personal.webp'),
-                    fit: BoxFit
-                        .cover, // Cover the area without distorting the aspect ratio
-                  ),
-                ),
-              ),
-            const SizedBox(
-                width: 10), // Space between the icon/image and the text
-            if (image == null) Icon(icon, size: 24),
-            const SizedBox(width: 10), // Icon
+            Container(
+              height: iconHeight, // Reserve space for the icon/image
+              child: imageProvider != null
+                  ? Image(image: imageProvider, fit: BoxFit.cover)
+                  : Icon(icon, size: iconHeight),
+            ),
+            const SizedBox(height: 10), // Space between image and text
             Text(
               text,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold, // Makes text bold
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
               ),
-            )
+            ),
           ],
         ),
       ),
