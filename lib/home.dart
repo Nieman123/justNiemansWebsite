@@ -195,12 +195,6 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const EventCard(
-                        title: 'PLUTO AT THE GETAWAY',
-                        imageUrl: 'assets/st patty .webp',
-                        date: '3/16/2024',
-                        location: 'ASHEVILLE, NC',
-                      ),
-                      const EventCard(
                         title: "PLUTO'S PUFF: A 420 FEST",
                         imageUrl: 'assets/420-fest-v2.webp',
                         date: '4/20/2024',
@@ -413,14 +407,6 @@ class _HomePageState extends State<HomePage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             direction: Axis.horizontal,
                             children: [
-                              Expanded(
-                                child: EventCard(
-                                  title: 'PLUTO AT THE GETAWAY',
-                                  imageUrl: 'assets/st patty .webp',
-                                  date: '3/16/2024',
-                                  location: 'ASHEVILLE, NC',
-                                ),
-                              ),
                               Expanded(
                                 child: EventCard(
                                   title: "PLUTO'S PUFF: A 420 FEST",
