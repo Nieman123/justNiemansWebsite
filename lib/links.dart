@@ -38,7 +38,7 @@ class LinksPage extends StatelessWidget {
               const LinkBox(
                   icon: Icons.link,
                   image: AssetImage("assets/my-music.webp"),
-                  text: 'PRESAVE "MY MUSIC"',
+                  text: 'STREAM "MY MUSIC"',
                   url: 'https://distrokid.com/hyperfollow/justnieman/my-music'),
               const LinkBox(
                   icon: Icons.link,
