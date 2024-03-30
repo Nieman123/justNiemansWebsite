@@ -6,6 +6,7 @@ import 'package:niemanswebsite/eventcard.dart';
 import 'package:niemanswebsite/livesrelease.dart';
 import 'package:niemanswebsite/contact_me.dart';
 import 'package:niemanswebsite/introduction.dart';
+import 'package:niemanswebsite/music_release.dart';
 import 'package:niemanswebsite/personalrelease.dart';
 
 import 'about.dart';
@@ -85,7 +86,6 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(
                         height: 10.0,
                       ),
-                      About(fontSize: 15),
                       Center(
                         child: CarouselSlider(
                           options: CarouselOptions(
@@ -138,6 +138,7 @@ class _HomePageState extends State<HomePage> {
                           }).toList(),
                         ),
                       ),
+                      About(fontSize: 15),
                       Padding(
                         padding: EdgeInsets.all(height * 0.04),
                         child: Center(
@@ -162,13 +163,26 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      LivesRelease(
-                        fontSize: 15,
-                        isMobile: true,
+                      MusicRelease(
+                        title: 'STREAM "MY MUSIC"',
+                        image: const AssetImage("assets/my-music.webp"),
+                        listenUrl:
+                            'https://distrokid.com/hyperfollow/justnieman/my-music',
+                        isMobile: false,
                       ),
-                      PersonalRelease(
-                        fontSize: 15,
-                        isMobile: true,
+                      MusicRelease(
+                        title: 'STREAM "LIVES"',
+                        image: const AssetImage("assets/lives.webp"),
+                        listenUrl:
+                            'https://distrokid.com/hyperfollow/justnieman/lives',
+                        isMobile: false,
+                      ),
+                      MusicRelease(
+                        title: 'STREAM "PERSONAL"',
+                        image: const AssetImage("assets/personal.webp"),
+                        listenUrl:
+                            'https://distrokid.com/hyperfollow/justnieman/personal',
+                        isMobile: false,
                       ),
                       Padding(
                         padding: EdgeInsets.all(height * 0.04),
@@ -197,6 +211,12 @@ class _HomePageState extends State<HomePage> {
                       const EventCard(
                         title: "PLUTO'S PUFF: A 420 FEST",
                         imageUrl: 'assets/420-fest-v2.webp',
+                        date: '4/20/2024',
+                        location: 'ASHEVILLE, NC',
+                      ),
+                      const EventCard(
+                        title: "FOR THE UNDERDOGS",
+                        imageUrl: 'assets/bens.webp',
                         date: '4/20/2024',
                         location: 'ASHEVILLE, NC',
                       ),
@@ -367,13 +387,27 @@ class _HomePageState extends State<HomePage> {
                             direction: Axis.horizontal,
                             children: [
                               Expanded(
-                                  child: LivesRelease(
-                                fontSize: 15,
+                                  child: MusicRelease(
+                                title: 'STREAM "MY MUSIC"',
+                                image: const AssetImage("assets/my-music.webp"),
+                                listenUrl:
+                                    'https://distrokid.com/hyperfollow/justnieman/my-music',
                                 isMobile: false,
                               )),
                               Expanded(
-                                  child: PersonalRelease(
-                                fontSize: 15,
+                                  child: MusicRelease(
+                                title: 'STREAM "LIVES"',
+                                image: const AssetImage("assets/lives.webp"),
+                                listenUrl:
+                                    'https://distrokid.com/hyperfollow/justnieman/lives',
+                                isMobile: false,
+                              )),
+                              Expanded(
+                                  child: MusicRelease(
+                                title: 'STREAM "PERSONAL"',
+                                image: const AssetImage("assets/personal.webp"),
+                                listenUrl:
+                                    'https://distrokid.com/hyperfollow/justnieman/personal',
                                 isMobile: false,
                               )),
                             ],
@@ -411,6 +445,14 @@ class _HomePageState extends State<HomePage> {
                                 child: EventCard(
                                   title: "PLUTO'S PUFF: A 420 FEST",
                                   imageUrl: 'assets/420-fest-v2.webp',
+                                  date: '4/14/2024',
+                                  location: "BEN'S TUNEUP ASHEVILLE, NC",
+                                ),
+                              ),
+                              Expanded(
+                                child: EventCard(
+                                  title: "FOR THE UNDERDOGS",
+                                  imageUrl: 'assets/bens.webp',
                                   date: '4/20/2024',
                                   location: 'ASHEVILLE, NC',
                                 ),
