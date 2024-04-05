@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_list_view/flutter_list_view.dart';
+import 'package:flutter_improved_scrolling/flutter_improved_scrolling.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:go_router/go_router.dart';
 import 'package:niemanswebsite/links.dart';
@@ -70,6 +70,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final controller = ScrollController();
+
   List<Widget> widgetList = [
     //const UnderConstruction(),
     const HomePage(),
@@ -99,11 +101,14 @@ class _MyHomePageState extends State<MyHomePage> {
               variation3: 0,
               rotation: 0,
             ),
-            FlutterListView(
-                delegate: FlutterListViewDelegate(
-              (BuildContext context, int index) => widgetList[index],
-              childCount: widgetList.length,
-            ))
+            ImprovedScrolling(
+              scrollController: controller,
+              enableKeyboardScrolling: true,
+              child: ListView(
+                controller: controller,
+                children: [widgetList[0]],
+              ),
+            )
           ]),
         );
       } else {
@@ -124,11 +129,14 @@ class _MyHomePageState extends State<MyHomePage> {
               variation3: 0,
               rotation: 0,
             ),
-            FlutterListView(
-                delegate: FlutterListViewDelegate(
-              (BuildContext context, int index) => widgetList[index],
-              childCount: widgetList.length,
-            ))
+            ImprovedScrolling(
+              scrollController: controller,
+              enableKeyboardScrolling: true,
+              child: ListView(
+                controller: controller,
+                children: [widgetList[0]],
+              ),
+            )
           ]),
         );
       }
