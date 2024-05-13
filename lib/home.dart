@@ -209,16 +209,10 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const EventCard(
-                        title: "PLUTO'S PUFF: A 420 FEST",
-                        imageUrl: 'assets/420-fest-v2.webp',
-                        date: '4/20/2024',
+                        title: "TAURUS BIRTHDAY BASH",
+                        imageUrl: 'assets/getaway-may-18th_half-min.png',
+                        date: '5/13/2024',
                         location: 'THE GETAWAY ASHEVILLE, NC',
-                      ),
-                      const EventCard(
-                        title: "FOR THE UNDERDOGS",
-                        imageUrl: 'assets/bens.jpg',
-                        date: '4/14/2024',
-                        location: "BEN'S TUNEUP ASHEVILLE, NC",
                       ),
                     ],
                   ),
@@ -443,18 +437,11 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Expanded(
                                 child: EventCard(
-                                  title: "PLUTO'S PUFF: A 420 FEST",
-                                  imageUrl: 'assets/420-fest-v2.webp',
+                                  title: "TAURUS BIRTHDAY BASH",
+                                  imageUrl:
+                                      'assets/getaway-may-18th_half-min.png',
                                   date: '4/20/2024',
                                   location: "THE GETAWAY ASHEVILLE, NC",
-                                ),
-                              ),
-                              Expanded(
-                                child: EventCard(
-                                  title: "FOR THE UNDERDOGS",
-                                  imageUrl: 'assets/bens.jpg',
-                                  date: '4/14/2024',
-                                  location: "BEN'S TUNEUP ASHEVILLE, NC",
                                 ),
                               ),
                             ],

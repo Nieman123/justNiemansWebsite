@@ -71,14 +71,12 @@ flutter:
   assets:
     - assets/lives.webp
     - assets/personal.webp
-    - assets/420-fest-v2.webp
-    - assets/st patty .webp
+    - assets/getaway-may-18th_half-min.png
     - assets/home/constant/
     - assets/gallery/
     - assets/instagram.webp
     - assets/youtube-icon.webp
     - assets/my-music.webp
-    - assets/bens.webp
     - assets/bens.jpg
     - assets/my-music.webp
 
