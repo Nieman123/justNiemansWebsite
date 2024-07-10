@@ -3,6 +3,7 @@ import 'package:flutter_improved_scrolling/flutter_improved_scrolling.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:go_router/go_router.dart';
 import 'package:niemanswebsite/links.dart';
+import 'package:niemanswebsite/ad_page.dart';
 import 'package:sa3_liquid/liquid/plasma/plasma.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -41,6 +42,12 @@ class MyApp extends StatelessWidget {
         path: '/links',
         builder: (BuildContext context, GoRouterState state) {
           return const LinksPage();
+        },
+      ),
+      GoRoute(
+        path: '/usb-clean',
+        builder: (BuildContext context, GoRouterState state) {
+          return const AdPage();
         },
       ),
     ],

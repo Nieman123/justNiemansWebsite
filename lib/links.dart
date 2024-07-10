@@ -52,6 +52,11 @@ class LinksPage extends StatelessWidget {
                   url: 'https://distrokid.com/hyperfollow/justnieman/lives'),
               const LinkBox(
                   icon: Icons.youtube_searched_for,
+                  image: AssetImage("assets/soundcloud-logo.png"),
+                  text: 'SOUNDCLOUD',
+                  url: 'https://soundcloud.com/just-nieman'),
+              const LinkBox(
+                  icon: Icons.youtube_searched_for,
                   image: AssetImage("assets/youtube-icon.webp"),
                   text: 'NIEMIX VOL. 1 on YOUTUBE',
                   url: 'https://www.youtube.com/watch?v=_HD_6o6um1U'),
