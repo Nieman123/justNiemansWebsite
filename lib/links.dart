@@ -37,6 +37,11 @@ class LinksPage extends StatelessWidget {
               const SizedBox(height: 20),
               const LinkBox(
                   icon: Icons.link,
+                  image: AssetImage("assets/moby-d.png"),
+                  text: 'PRESAVE "MOBY D"',
+                  url: 'https://distrokid.com/hyperfollow/justnieman/moby-d'),
+              const LinkBox(
+                  icon: Icons.link,
                   image: AssetImage("assets/my-music.webp"),
                   text: 'STREAM "MY MUSIC"',
                   url: 'https://distrokid.com/hyperfollow/justnieman/my-music'),
