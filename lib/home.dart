@@ -95,8 +95,18 @@ class _HomePageState extends State<HomePage> {
                             enlargeStrategy: CenterPageEnlargeStrategy.height,
                           ),
                           items: [
-                            ['assets/gallery/4.jpg', 'The Weekends'],
-                            ['assets/gallery/6.jpg', 'With my friend Ronie'],
+                            ['assets/gallery/1.jpg', 'Memories at The Getaway'],
+                            ['assets/gallery/2.jpg', 'Afters?'],
+                            [
+                              'assets/gallery/3.jpg',
+                              'Loading up a track that will be just right.'
+                            ],
+                            [
+                              'assets/gallery/4.jpg',
+                              'Times at Water Street (White Rabbit)'
+                            ],
+                            ['assets/gallery/5.jpg', 'Memories at The Getaway'],
+                            ['assets/gallery/6.jpg', 'Me n the Pluto Crew'],
                             ['assets/gallery/2.webp', 'At Static Age Loft'],
                           ].map((i) {
                             return Builder(
@@ -164,6 +174,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       MusicRelease(
+                        title: 'PRESAVE "MOBY D"',
+                        image: const AssetImage("assets/moby-d.png"),
+                        listenUrl:
+                            'https://distrokid.com/hyperfollow/justnieman/moby-d',
+                        isMobile: false,
+                      ),
+                      MusicRelease(
                         title: 'STREAM "MY MUSIC"',
                         image: const AssetImage("assets/my-music.webp"),
                         listenUrl:
@@ -184,36 +201,36 @@ class _HomePageState extends State<HomePage> {
                             'https://distrokid.com/hyperfollow/justnieman/personal',
                         isMobile: false,
                       ),
-                      Padding(
-                        padding: EdgeInsets.all(height * 0.04),
-                        child: Center(
-                          child: Text(
-                            "UPCOMING SHOWS",
-                            style: TextStyle(
-                              fontSize:
-                                  28.0, // Adjust as per your design requirement
-                              fontWeight: FontWeight.w700,
-                              color: Theme.of(context).colorScheme.onPrimary,
-                              letterSpacing: 2.0,
-                              fontFamily: 'SourceCodePro',
-                              shadows: [
-                                Shadow(
-                                  offset: const Offset(2.0, 2.0),
-                                  blurRadius: 3.0,
-                                  color: const Color.fromARGB(29, 165, 0, 143)
-                                      .withOpacity(0.3),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      const EventCard(
-                        title: "TAURUS BIRTHDAY BASH",
-                        imageUrl: 'assets/getaway-may-18th_half-min.png',
-                        date: '5/13/2024',
-                        location: 'THE GETAWAY ASHEVILLE, NC',
-                      ),
+                      // Padding(
+                      //   padding: EdgeInsets.all(height * 0.04),
+                      //   child: Center(
+                      //     child: Text(
+                      //       "UPCOMING SHOWS",
+                      //       style: TextStyle(
+                      //         fontSize:
+                      //             28.0, // Adjust as per your design requirement
+                      //         fontWeight: FontWeight.w700,
+                      //         color: Theme.of(context).colorScheme.onPrimary,
+                      //         letterSpacing: 2.0,
+                      //         fontFamily: 'SourceCodePro',
+                      //         shadows: [
+                      //           Shadow(
+                      //             offset: const Offset(2.0, 2.0),
+                      //             blurRadius: 3.0,
+                      //             color: const Color.fromARGB(29, 165, 0, 143)
+                      //                 .withOpacity(0.3),
+                      //           ),
+                      //         ],
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
+                      // const EventCard(
+                      //   title: "TAURUS BIRTHDAY BASH",
+                      //   imageUrl: 'assets/getaway-may-18th_half-min.png',
+                      //   date: '5/13/2024',
+                      //   location: 'THE GETAWAY ASHEVILLE, NC',
+                      // ),
                     ],
                   ),
                 ),
@@ -291,10 +308,26 @@ class _HomePageState extends State<HomePage> {
                                       enlargeStrategy:
                                           CenterPageEnlargeStrategy.height),
                                   items: [
-                                    ['assets/gallery/4.jpg', 'The Weekends'],
+                                    [
+                                      'assets/gallery/1.jpg',
+                                      'Memories at The Getaway'
+                                    ],
+                                    ['assets/gallery/2.jpg', 'Afters?'],
+                                    [
+                                      'assets/gallery/3.jpg',
+                                      'Loading up a track that will be just right.'
+                                    ],
+                                    [
+                                      'assets/gallery/4.jpg',
+                                      'Times at Water Street (White Rabbit)'
+                                    ],
+                                    [
+                                      'assets/gallery/5.jpg',
+                                      'Memories at The Getaway'
+                                    ],
                                     [
                                       'assets/gallery/6.jpg',
-                                      'With my friend Ronie'
+                                      'Me n the Pluto Crew'
                                     ],
                                     [
                                       'assets/gallery/2.webp',
@@ -382,6 +415,14 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Expanded(
                                   child: MusicRelease(
+                                title: 'PRESAVE "MOBY D"',
+                                image: const AssetImage("assets/moby-d.png"),
+                                listenUrl:
+                                    'https://distrokid.com/hyperfollow/justnieman/moby-d',
+                                isMobile: false,
+                              )),
+                              Expanded(
+                                  child: MusicRelease(
                                 title: 'STREAM "MY MUSIC"',
                                 image: const AssetImage("assets/my-music.webp"),
                                 listenUrl:
@@ -407,46 +448,46 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsets.all(height * 0.04),
-                          child: Center(
-                            child: Text(
-                              "UPCOMING SHOWS",
-                              style: TextStyle(
-                                fontSize: 28.0,
-                                fontWeight: FontWeight.w700,
-                                color: Theme.of(context).colorScheme.onPrimary,
-                                letterSpacing: 2.0,
-                                fontFamily: 'SourceCodePro',
-                                shadows: [
-                                  Shadow(
-                                    offset: const Offset(2.0, 2.0),
-                                    blurRadius: 3.0,
-                                    color: const Color.fromARGB(29, 165, 0, 143)
-                                        .withOpacity(0.3),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          child: Flex(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            direction: Axis.horizontal,
-                            children: [
-                              Expanded(
-                                child: EventCard(
-                                  title: "TAURUS BIRTHDAY BASH",
-                                  imageUrl:
-                                      'assets/getaway-may-18th_half-min.png',
-                                  date: '4/20/2024',
-                                  location: "THE GETAWAY ASHEVILLE, NC",
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                        // Padding(
+                        //   padding: EdgeInsets.all(height * 0.04),
+                        //   child: Center(
+                        //     child: Text(
+                        //       "UPCOMING SHOWS",
+                        //       style: TextStyle(
+                        //         fontSize: 28.0,
+                        //         fontWeight: FontWeight.w700,
+                        //         color: Theme.of(context).colorScheme.onPrimary,
+                        //         letterSpacing: 2.0,
+                        //         fontFamily: 'SourceCodePro',
+                        //         shadows: [
+                        //           Shadow(
+                        //             offset: const Offset(2.0, 2.0),
+                        //             blurRadius: 3.0,
+                        //             color: const Color.fromARGB(29, 165, 0, 143)
+                        //                 .withOpacity(0.3),
+                        //           ),
+                        //         ],
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
+                        // const SizedBox(
+                        //   child: Flex(
+                        //     crossAxisAlignment: CrossAxisAlignment.start,
+                        //     direction: Axis.horizontal,
+                        //     children: [
+                        //       Expanded(
+                        //         child: EventCard(
+                        //           title: "TAURUS BIRTHDAY BASH",
+                        //           imageUrl:
+                        //               'assets/getaway-may-18th_half-min.png',
+                        //           date: '4/20/2024',
+                        //           location: "THE GETAWAY ASHEVILLE, NC",
+                        //         ),
+                        //       ),
+                        //     ],
+                        //   ),
+                        // ),
                         const ContactMe()
                       ],
                     ),
