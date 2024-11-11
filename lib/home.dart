@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       MusicRelease(
-                        title: 'PRESAVE "MOBY D"',
+                        title: 'STREAM "MOBY D"',
                         image: const AssetImage("assets/moby-d.png"),
                         listenUrl:
                             'https://distrokid.com/hyperfollow/justnieman/moby-d',
@@ -415,7 +415,7 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Expanded(
                                   child: MusicRelease(
-                                title: 'PRESAVE "MOBY D"',
+                                title: 'STREAM "MOBY D"',
                                 image: const AssetImage("assets/moby-d.png"),
                                 listenUrl:
                                     'https://distrokid.com/hyperfollow/justnieman/moby-d',
