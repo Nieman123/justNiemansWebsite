@@ -111,8 +111,8 @@ Nieman's In-Wash USB Cleaner is here to save the day. Simply toss your USB in th
                 icon: const Icon(Icons.attach_money),
                 label: const Text("Buy Nieman's In-Wash USB Cleaner"),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
-                  onPrimary: Colors.white,
+                  foregroundColor: Colors.purple,
+                  //onPrimary: Colors.white,
                   textStyle: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

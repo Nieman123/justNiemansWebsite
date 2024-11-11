@@ -63,7 +63,7 @@ class MusicRelease extends StatelessWidget {
               const SizedBox(height: 10.0),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.purple, // Set the button color to purple
+                  foregroundColor: Colors.purple, // Set the button color to purple
                 ),
                 onPressed: () async {
                   var url =

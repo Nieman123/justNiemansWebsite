@@ -52,7 +52,7 @@ class PersonalRelease extends StatelessWidget {
               const SizedBox(height: 10.0),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
+                  foregroundColor: Colors.purple,
                 ),
                 onPressed: () async {
                   var url = Uri.parse(

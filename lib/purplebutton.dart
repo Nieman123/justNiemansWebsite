@@ -11,7 +11,7 @@ class PurpleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Colors.purple, // Set the button color to purple
+        foregroundColor: Colors.purple, // Set the button color to purple
       ),
       onPressed: () async {
         if (await canLaunchUrl(url)) {
