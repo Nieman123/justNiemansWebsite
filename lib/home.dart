@@ -174,6 +174,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       MusicRelease(
+                        title: 'PRESAVE "IT\'S NOT THAT DEEP"',
+                        image: const AssetImage("assets/its-not-that-deep.png"),
+                        listenUrl:
+                            'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep',
+                        isMobile: false,
+                      ),
+                      MusicRelease(
                         title: 'STREAM "MOBY D"',
                         image: const AssetImage("assets/moby-d.png"),
                         listenUrl:
@@ -413,6 +420,14 @@ class _HomePageState extends State<HomePage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             direction: Axis.horizontal,
                             children: [
+                              Expanded(
+                                  child: MusicRelease(
+                                title: 'PRESAVE "IT\'S NOT THAT DEEP"',
+                                image: const AssetImage("assets/its-not-that-deep.png"),
+                                listenUrl:
+                                    'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep',
+                                isMobile: false,
+                              ),),
                               Expanded(
                                   child: MusicRelease(
                                 title: 'STREAM "MOBY D"',

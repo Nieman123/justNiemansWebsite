@@ -8,14 +8,14 @@ class MusicRelease extends StatelessWidget {
   final bool isMobile;
   final double fontSize; // Made fontSize optional with a default value
 
-  MusicRelease({
-    Key? key,
+  const MusicRelease({
+    super.key,
     required this.title,
     required this.image, // Now accepts any ImageProvider
     required this.listenUrl,
     this.fontSize = 14.0, // Default font size if not provided
     required this.isMobile,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
