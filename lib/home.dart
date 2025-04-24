@@ -422,7 +422,7 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Expanded(
                                   child: MusicRelease(
-                                title: 'PRESAVE "IT\'S NOT THAT DEEP"',
+                                title: 'STREAM "IT\'S NOT THAT DEEP"',
                                 image: const AssetImage("assets/its-not-that-deep.png"),
                                 listenUrl:
                                     'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep',

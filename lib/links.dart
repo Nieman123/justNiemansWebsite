@@ -38,7 +38,7 @@ class LinksPage extends StatelessWidget {
               const LinkBox(
                   icon: Icons.link,
                   image: AssetImage("assets/its-not-that-deep.png"),
-                  text: 'PRESAVE "IT\'S NOT THAT DEEP"',
+                  text: 'STREAM "IT\'S NOT THAT DEEP"',
                   url: 'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep'),
               const LinkBox(
                   icon: Icons.link,
