@@ -19,63 +19,57 @@ class MusicRelease extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-
-    double cardWidth = screenWidth * 0.9;
-
-    double maxWidth = 900.0;
-    double containerWidth = cardWidth > maxWidth ? maxWidth : cardWidth;
-
     return Container(
-      padding: const EdgeInsets.fromLTRB(12.0, 5.0, 12.0, 30.0),
-      width: containerWidth,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16.0),
+      decoration: BoxDecoration(
+        color: Colors.grey[900],
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(
+          maxHeight: 300,
+          minHeight: 260,
         ),
-        elevation: 5.0,
-        color: Colors.white.withOpacity(0.2), // Transparent white background
         child: Padding(
-          padding: const EdgeInsets.all(
-              20.0), // Overall padding for the Card's content
+          padding: const EdgeInsets.all(10.0),
           child: Column(
-            mainAxisSize:
-                MainAxisSize.min, // Make the column take up minimum space
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
             children: [
               Text(
-                title.toUpperCase(), // Use the title passed to the widget
+                title,
                 style: TextStyle(
-                  fontFamily: 'SourceCodePro',
-                  letterSpacing: 2.5,
-                  color: Theme.of(context).primaryColorLight,
-                  fontSize: fontSize * 1.5,
+                  fontSize: isMobile ? 16 : 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                  child: Image(
+                    image: image,
+                    fit: BoxFit
+                        .contain, // or .cover if you want it to fill the space entirely
+                  ),
                 ),
               ),
-              const SizedBox(height: 10.0),
-              Flexible(
-                // Make the image flexible
-                child: FittedBox(
-                  // Fit the image within the bounds
-                  fit: BoxFit.contain,
-                  child: Image(image: image), // Now using ImageProvider
-                ),
-              ),
-              const SizedBox(height: 10.0),
+              const SizedBox(height: 10),
               ElevatedButton(
+                onPressed: () => launchUrl(Uri.parse(listenUrl)),
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.purple, // Set the button color to purple
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.purple[900],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
                 ),
-                onPressed: () async {
-                  var url =
-                      Uri.parse(listenUrl); // Use the URL passed to the widget
-                  if (await canLaunchUrl(url)) {
-                    await launchUrl(url);
-                  } else {
-                    throw 'Could not launch $url';
-                  }
-                },
-                child: const Text('CLICK TO LISTEN'),
-              )
+                child: const Text("CLICK TO LISTEN"),
+              ),
             ],
           ),
         ),

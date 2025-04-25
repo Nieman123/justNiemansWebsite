@@ -54,14 +54,14 @@ class _HomePageState extends State<HomePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                                            "Just Nieman",
-                                            textScaleFactor: 4.5,
-                                            style: TextStyle(
-                                              fontFamily: 'FjallaOne',
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.white,
-                                            ),
-                                          ),
+                        "Just Nieman",
+                        textScaleFactor: 4.5,
+                        style: TextStyle(
+                          fontFamily: 'FjallaOne',
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),
+                      ),
                       Padding(
                         padding: EdgeInsets.only(top: height * 0.07),
                         child: const Introduction(
@@ -158,40 +158,65 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      MusicRelease(
-                        title: 'PRESAVE "IT\'S NOT THAT DEEP"',
-                        image: const AssetImage("assets/its-not-that-deep.png"),
-                        listenUrl:
-                            'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep',
-                        isMobile: false,
+                      const SizedBox(
+                        height: 10.0,
                       ),
-                      MusicRelease(
-                        title: 'STREAM "MOBY D"',
-                        image: const AssetImage("assets/moby-d.png"),
-                        listenUrl:
-                            'https://distrokid.com/hyperfollow/justnieman/moby-d',
-                        isMobile: false,
+                      Center(
+                        child: SizedBox(
+                          width: 300,
+                          child: MusicRelease(
+                            title: 'PRESAVE "IT\'S NOT THAT DEEP"',
+                            image: const AssetImage("assets/its-not-that-deep.png"),
+                            listenUrl:
+                                'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep',
+                            isMobile: true,
+                          ),
+                        ),
                       ),
-                      MusicRelease(
-                        title: 'STREAM "MY MUSIC"',
-                        image: const AssetImage("assets/my-music.webp"),
-                        listenUrl:
-                            'https://distrokid.com/hyperfollow/justnieman/my-music',
-                        isMobile: false,
+                      const SizedBox(
+                        height: 10.0,
                       ),
-                      MusicRelease(
-                        title: 'STREAM "LIVES"',
-                        image: const AssetImage("assets/lives.webp"),
-                        listenUrl:
-                            'https://distrokid.com/hyperfollow/justnieman/lives',
-                        isMobile: false,
+                      Center(
+                        child: SizedBox(
+                          width: 300,
+                          child: MusicRelease(
+                            title: 'STREAM "MY MUSIC"',
+                            image: const AssetImage("assets/my-music.webp"),
+                            listenUrl:
+                                'https://distrokid.com/hyperfollow/justnieman/my-music',
+                            isMobile: true,
+                          ),
+                        ),
                       ),
-                      MusicRelease(
-                        title: 'STREAM "PERSONAL"',
-                        image: const AssetImage("assets/personal.webp"),
-                        listenUrl:
-                            'https://distrokid.com/hyperfollow/justnieman/personal',
-                        isMobile: false,
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      Center(
+                        child: SizedBox(
+                          width: 300,
+                          child: MusicRelease(
+                            title: 'STREAM "LIVES"',
+                            image: const AssetImage("assets/lives.webp"),
+                            listenUrl:
+                                'https://distrokid.com/hyperfollow/justnieman/lives',
+                            isMobile: true,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      Center(
+                        child: SizedBox(
+                          width: 300,
+                          child: MusicRelease(
+                            title: 'STREAM "PERSONAL"',
+                            image: const AssetImage("assets/personal.webp"),
+                            listenUrl:
+                                'https://distrokid.com/hyperfollow/justnieman/personal',
+                            isMobile: true,
+                          ),
+                        ),
                       ),
                       // Padding(
                       //   padding: EdgeInsets.all(height * 0.04),
@@ -258,14 +283,14 @@ class _HomePageState extends State<HomePage> {
                                     Padding(
                                       padding: EdgeInsets.all(height * 0.04),
                                       child: const Text(
-                                            "Just Nieman",
-                                            textScaleFactor: 4.5,
-                                            style: TextStyle(
-                                              fontFamily: 'FjallaOne',
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.white,
-                                            ),
-                                          ),
+                                        "Just Nieman",
+                                        textScaleFactor: 4.5,
+                                        style: TextStyle(
+                                          fontFamily: 'FjallaOne',
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.white,
+                                        ),
+                                      ),
                                     ),
                                     const Introduction(
                                         word: 'Multi-genre EDM producer and DJ',
@@ -383,54 +408,43 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: 500.0,
-                          child: Flex(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            direction: Axis.horizontal,
-                            children: [
-                              Expanded(
-                                  child: MusicRelease(
-                                title: 'STREAM "IT\'S NOT THAT DEEP"',
-                                image: const AssetImage("assets/its-not-that-deep.png"),
-                                listenUrl:
-                                    'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep',
-                                isMobile: false,
-                              ),),
-                              Expanded(
-                                  child: MusicRelease(
-                                title: 'STREAM "MOBY D"',
-                                image: const AssetImage("assets/moby-d.png"),
-                                listenUrl:
-                                    'https://distrokid.com/hyperfollow/justnieman/moby-d',
-                                isMobile: false,
-                              )),
-                              Expanded(
-                                  child: MusicRelease(
-                                title: 'STREAM "MY MUSIC"',
-                                image: const AssetImage("assets/my-music.webp"),
-                                listenUrl:
-                                    'https://distrokid.com/hyperfollow/justnieman/my-music',
-                                isMobile: false,
-                              )),
-                              Expanded(
-                                  child: MusicRelease(
-                                title: 'STREAM "LIVES"',
-                                image: const AssetImage("assets/lives.webp"),
-                                listenUrl:
-                                    'https://distrokid.com/hyperfollow/justnieman/lives',
-                                isMobile: false,
-                              )),
-                              Expanded(
-                                  child: MusicRelease(
-                                title: 'STREAM "PERSONAL"',
-                                image: const AssetImage("assets/personal.webp"),
-                                listenUrl:
-                                    'https://distrokid.com/hyperfollow/justnieman/personal',
-                                isMobile: false,
-                              )),
-                            ],
-                          ),
+                        GridView.count(
+                          crossAxisCount: 4,
+                          crossAxisSpacing: 16,
+                          mainAxisSpacing: 16,
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          childAspectRatio: 0.7, // Tweak this to your liking
+                          children: const [
+                            MusicRelease(
+                              title: '"IT\'S NOT THAT DEEP"',
+                              image: AssetImage("assets/its-not-that-deep.png"),
+                              listenUrl:
+                                  'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep',
+                              isMobile: false,
+                            ),
+                            MusicRelease(
+                              title: '"MY MUSIC"',
+                              image: AssetImage("assets/my-music.webp"),
+                              listenUrl:
+                                  'https://distrokid.com/hyperfollow/justnieman/my-music',
+                              isMobile: false,
+                            ),
+                            MusicRelease(
+                              title: '"LIVES"',
+                              image: AssetImage("assets/lives.webp"),
+                              listenUrl:
+                                  'https://distrokid.com/hyperfollow/justnieman/lives',
+                              isMobile: false,
+                            ),
+                            MusicRelease(
+                              title: '"PERSONAL"',
+                              image: AssetImage("assets/personal.webp"),
+                              listenUrl:
+                                  'https://distrokid.com/hyperfollow/justnieman/personal',
+                              isMobile: false,
+                            ),
+                          ],
                         ),
                         // Padding(
                         //   padding: EdgeInsets.all(height * 0.04),

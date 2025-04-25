@@ -36,15 +36,20 @@ class LinksPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const LinkBox(
+                  icon: Icons.youtube_searched_for,
+                  image: AssetImage("assets/soundcloud-logo.png"),
+                  text: 'SOUNDCLOUD',
+                  url: 'https://soundcloud.com/just-nieman'),
+              const LinkBox(
+                  icon: Icons.music_note,
+                  image: AssetImage("assets/instagram.webp"),
+                  text: 'FOLLOW ME ON INSTA',
+                  url: 'https://instagram.com/justnieman/'),
+              const LinkBox(
                   icon: Icons.link,
                   image: AssetImage("assets/its-not-that-deep.png"),
                   text: 'STREAM "IT\'S NOT THAT DEEP"',
                   url: 'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep'),
-              const LinkBox(
-                  icon: Icons.link,
-                  image: AssetImage("assets/moby-d.png"),
-                  text: 'STREAM "MOBY D"',
-                  url: 'https://distrokid.com/hyperfollow/justnieman/moby-d'),
               const LinkBox(
                   icon: Icons.link,
                   image: AssetImage("assets/my-music.webp"),
@@ -62,19 +67,9 @@ class LinksPage extends StatelessWidget {
                   url: 'https://distrokid.com/hyperfollow/justnieman/lives'),
               const LinkBox(
                   icon: Icons.youtube_searched_for,
-                  image: AssetImage("assets/soundcloud-logo.png"),
-                  text: 'SOUNDCLOUD',
-                  url: 'https://soundcloud.com/just-nieman'),
-              const LinkBox(
-                  icon: Icons.youtube_searched_for,
                   image: AssetImage("assets/youtube-icon.webp"),
                   text: 'NIEMIX VOL. 1 on YOUTUBE',
                   url: 'https://www.youtube.com/watch?v=_HD_6o6um1U'),
-              const LinkBox(
-                  icon: Icons.music_note,
-                  image: AssetImage("assets/instagram.webp"),
-                  text: 'FOLLOW ME ON INSTA',
-                  url: 'https://instagram.com/justnieman/'),
             ],
           ),
         ),
