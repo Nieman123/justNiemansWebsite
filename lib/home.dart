@@ -1,13 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:foil/foil.dart';
-import 'package:niemanswebsite/eventcard.dart';
-import 'package:niemanswebsite/livesrelease.dart';
 import 'package:niemanswebsite/contact_me.dart';
 import 'package:niemanswebsite/introduction.dart';
 import 'package:niemanswebsite/music_release.dart';
-import 'package:niemanswebsite/personalrelease.dart';
 
 import 'about.dart';
 
@@ -57,26 +53,15 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Roll(
-                        crinkle: Crinkle.vivacious,
-                        child: Foil(
-                          gradient: Foils.oilslick,
-                          opacity: 0.6,
-                          scalar: Scalar.identity,
-                          speed: Duration(seconds: 200),
-                          duration: Duration(milliseconds: 100000),
-                          child: Text(
-                            "Just Nieman",
-                            textScaleFactor: 4.5,
-                            style: TextStyle(
-                              fontFamily: 'FjallaOne',
-                              // letterSpacing: 10.5,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
+                      const Text(
+                                            "Just Nieman",
+                                            textScaleFactor: 4.5,
+                                            style: TextStyle(
+                                              fontFamily: 'FjallaOne',
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white,
+                                            ),
+                                          ),
                       Padding(
                         padding: EdgeInsets.only(top: height * 0.07),
                         child: const Introduction(
@@ -272,21 +257,7 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Padding(
                                       padding: EdgeInsets.all(height * 0.04),
-                                      child: Roll(
-                                        crinkle: Crinkle.twinkling,
-                                        child: Foil(
-                                          gradient: Foils.linearRainbow
-                                              .copyWith(
-                                                  begin: Alignment.topLeft,
-                                                  end: Alignment.bottomRight,
-                                                  colors: List.from(
-                                                      Foils.oilslick.colors)),
-                                          opacity: 0.6,
-                                          scalar: Scalar.identity,
-                                          speed: const Duration(seconds: 200),
-                                          duration:
-                                              const Duration(seconds: 100),
-                                          child: const Text(
+                                      child: const Text(
                                             "Just Nieman",
                                             textScaleFactor: 4.5,
                                             style: TextStyle(
@@ -295,8 +266,6 @@ class _HomePageState extends State<HomePage> {
                                               color: Colors.white,
                                             ),
                                           ),
-                                        ),
-                                      ),
                                     ),
                                     const Introduction(
                                         word: 'Multi-genre EDM producer and DJ',
