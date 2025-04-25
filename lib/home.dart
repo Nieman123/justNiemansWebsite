@@ -248,6 +248,8 @@ class _HomePageState extends State<HomePage> {
                       //   date: '5/13/2024',
                       //   location: 'THE GETAWAY ASHEVILLE, NC',
                       // ),
+
+                      const ContactMe()
                     ],
                   ),
                 ),

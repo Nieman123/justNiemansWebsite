@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'link_box.dart';
 
 class LinksPage extends StatelessWidget {
@@ -49,7 +50,8 @@ class LinksPage extends StatelessWidget {
                   icon: Icons.link,
                   image: AssetImage("assets/its-not-that-deep.png"),
                   text: 'STREAM "IT\'S NOT THAT DEEP"',
-                  url: 'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep'),
+                  url:
+                      'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep'),
               const LinkBox(
                   icon: Icons.link,
                   image: AssetImage("assets/my-music.webp"),
@@ -70,6 +72,44 @@ class LinksPage extends StatelessWidget {
                   image: AssetImage("assets/youtube-icon.webp"),
                   text: 'NIEMIX VOL. 1 on YOUTUBE',
                   url: 'https://www.youtube.com/watch?v=_HD_6o6um1U'),
+              const SizedBox(height: 20),
+              const Image(
+                image: AssetImage("assets/just-nieman-logo-inverted.png"),
+                height: 75,
+              ),
+              const SizedBox(height: 20),
+              const Text(
+                "For business inquiries, please contact:",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                ),
+              ),
+              TextButton(
+                onPressed: () async {
+                  final Uri emailUri = Uri(
+                    scheme: 'mailto',
+                    path: 'contact@niemans.website',
+                  );
+                  if (await canLaunchUrl(emailUri)) {
+                    await launchUrl(emailUri);
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                          content: Text('Could not launch email client')),
+                    );
+                  }
+                },
+                child: const Text(
+                  "contact@niemans.website",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
             ],
           ),
         ),

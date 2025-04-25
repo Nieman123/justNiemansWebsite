@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:niemanswebsite/social_media_bar.dart';
+import 'package:niemanswebsite/link_box.dart';
 
 import 'custom_text.dart';
 
@@ -35,9 +35,8 @@ class _ContactMeState extends State<ContactMe> {
           splashColor: Colors.transparent,
           focusColor: Colors.transparent,
           highlightColor: Colors.transparent,
-          child: ClipOval(
-              child: Image.asset('assets/contact_me/constant/picture.png',
-                  scale: scale)),
+          child:
+              Image.asset('assets/just-nieman-logo-inverted.png', scale: scale),
         ),
       );
     }
@@ -52,6 +51,7 @@ class _ContactMeState extends State<ContactMe> {
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 50),
               child: Column(
                 children: [
+                  imageWidget(10),
                   CustomText(
                       text: 'CONTACT',
                       fontSize: 28,
@@ -82,9 +82,22 @@ class _ContactMeState extends State<ContactMe> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10.0),
-                    child: SocialMediaBar(
-                      height: height,
-                    ),
+                    child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const LinkBox(
+                              icon: Icons.email,
+                              text: 'EMAIL ME',
+                              url: 'mailto:contact@niemans.website',
+                            ),
+                            const LinkBox(
+                              icon: Icons.camera_alt,
+                              image: AssetImage("assets/instagram.webp"),
+                              text: '@JUSTNIEMAN ON INSTA',
+                              url: 'https://instagram.com/justnieman/',
+                            ),
+                          ],
+                        ),
                   ),
                 ],
               ),
@@ -99,8 +112,10 @@ class _ContactMeState extends State<ContactMe> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      imageWidget(10),
+                      const SizedBox(width: 20),
                       SizedBox(
-                        width: width / 2,
+                        width: width / 3,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -144,13 +159,25 @@ class _ContactMeState extends State<ContactMe> {
                           ],
                         ),
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SocialMediaBar(
-                            height: height,
-                          ),
-                        ],
+                      SizedBox(
+                        width: width / 5,
+                        height: height / 3,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const LinkBox(
+                              icon: Icons.email,
+                              text: 'EMAIL ME',
+                              url: 'mailto:contact@niemans.website',
+                            ),
+                            const LinkBox(
+                              icon: Icons.camera_alt,
+                              image: AssetImage("assets/instagram.webp"),
+                              text: '@JUSTNIEMAN ON INSTA',
+                              url: 'https://instagram.com/justnieman/',
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
