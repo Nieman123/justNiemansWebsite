@@ -53,13 +53,12 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        "Just Nieman",
-                        textScaleFactor: 4.5,
-                        style: TextStyle(
-                          fontFamily: 'FjallaOne',
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Image.asset(
+                          'assets/just-nieman-logo-wide-inverted.png',
+                          width: 200, // adjust to fit your layout
+                          fit: BoxFit.contain,
                         ),
                       ),
                       Padding(
@@ -91,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                               'Times at Water Street (White Rabbit)'
                             ],
                             ['assets/gallery/5.jpg', 'Memories at The Getaway'],
-                            ['assets/gallery/6.jpg', 'Me n the Pluto Crew'],
+                            //['assets/gallery/6.jpg', 'Me n the Pluto Crew'],
                             ['assets/gallery/2.webp', 'At Static Age Loft'],
                           ].map((i) {
                             return Builder(
@@ -166,7 +165,8 @@ class _HomePageState extends State<HomePage> {
                           width: 300,
                           child: MusicRelease(
                             title: 'PRESAVE "IT\'S NOT THAT DEEP"',
-                            image: const AssetImage("assets/its-not-that-deep.png"),
+                            image: const AssetImage(
+                                "assets/its-not-that-deep.png"),
                             listenUrl:
                                 'https://distrokid.com/hyperfollow/justnieman/its-not-that-deep',
                             isMobile: true,
@@ -282,13 +282,13 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Padding(
                                       padding: EdgeInsets.all(height * 0.04),
-                                      child: const Text(
-                                        "Just Nieman",
-                                        textScaleFactor: 4.5,
-                                        style: TextStyle(
-                                          fontFamily: 'FjallaOne',
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.white,
+                                      child: Align(
+                                        alignment: Alignment.centerRight,
+                                        child: Image.asset(
+                                          'assets/just-nieman-logo-wide-inverted.png',
+                                          width:
+                                              500, // adjust to fit your layout
+                                          fit: BoxFit.contain,
                                         ),
                                       ),
                                     ),
@@ -326,10 +326,10 @@ class _HomePageState extends State<HomePage> {
                                       'assets/gallery/5.jpg',
                                       'Memories at The Getaway'
                                     ],
-                                    [
-                                      'assets/gallery/6.jpg',
-                                      'Me n the Pluto Crew'
-                                    ],
+                                    // [
+                                    //   'assets/gallery/6.jpg',
+                                    //   'Me n the Pluto Crew'
+                                    // ],
                                     [
                                       'assets/gallery/2.webp',
                                       'At Static Age Loft'

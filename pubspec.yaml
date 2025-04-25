@@ -81,10 +81,11 @@ flutter:
     - assets/soundcloud-logo.png
     - assets/moby-d.png
     - assets/its-not-that-deep.png
-
-
-
-
+    - assets/just-nieman-logo-wide-inverted.png
+    - assets/just-nieman-logo-wide.png
+    - assets/just-nieman-logo.png
+    - assets/just-nieman-logo-inverted.png
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
