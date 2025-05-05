@@ -36,6 +36,18 @@ class LinksPage extends StatelessWidget {
                     fontSize: 30),
               ),
               const SizedBox(height: 20),
+              const Text(
+                "MUSICIAN | PRODUCER | DJ",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+              ),
+              const LinkBox(
+                  icon: Icons.airplane_ticket,
+                  image: AssetImage("assets/pluto-campout-compressed.png"),
+                  text: 'Pluto Campout Tickets & Info',
+                  url: 'https://pluto.events/campout'),
               const LinkBox(
                   icon: Icons.youtube_searched_for,
                   image: AssetImage("assets/soundcloud-logo.png"),
