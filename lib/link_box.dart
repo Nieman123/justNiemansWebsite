@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'dart:math';
 
 class LinkBox extends StatelessWidget {
@@ -31,6 +32,10 @@ class LinkBox extends StatelessWidget {
 
     return InkWell(
       onTap: () async {
+        await FirebaseAnalytics.instance.logEvent(
+          name: 'link_box_tap',
+          parameters: {'text': text},
+        );
         final Uri uri = Uri.parse(url);
         if (await canLaunchUrl(uri)) {
           launchUrl(uri);

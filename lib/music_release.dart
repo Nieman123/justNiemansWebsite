@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 
 class MusicRelease extends StatelessWidget {
   final String title; // Title of the release
@@ -60,7 +61,13 @@ class MusicRelease extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               ElevatedButton(
-                onPressed: () => launchUrl(Uri.parse(listenUrl)),
+                onPressed: () async {
+                  await FirebaseAnalytics.instance.logEvent(
+                    name: 'music_release_click',
+                    parameters: {'title': title},
+                  );
+                  launchUrl(Uri.parse(listenUrl));
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: Colors.purple[900],
